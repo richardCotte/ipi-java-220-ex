@@ -55,7 +55,8 @@ public class Employe {
         if(dateEmbauche.isAfter(LocalDate.now())){
             throw new Exception("La date d'embauche ne peut être postérieure à la date courante");
         }
-            this.dateEmbauche = dateEmbauche;
+        //si le paramètre est une date antèrieure ou égale a la date courante
+        this.dateEmbauche = dateEmbauche;
     }
 
     public Double getSalaire() { return salaire; }
