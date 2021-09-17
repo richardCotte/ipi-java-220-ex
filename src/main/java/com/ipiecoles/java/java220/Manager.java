@@ -34,7 +34,7 @@ public class Manager extends Employe {
     @Override
     public void augmenterSalaire(Double augPercent) throws Exception {
         augmenterSalaireEquipe(augPercent);
-        super.augmenterSalaire(augPerc);
+        super.augmenterSalaire(augPercent);
     }
 
     @Override
