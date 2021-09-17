@@ -7,16 +7,21 @@ import java.util.Objects;
 public class Cadre extends Employe{
     private Double coefficient = 1d;
 
+    public Cadre() {
+    }
+
     public Cadre(Double coefficient) {
         this.coefficient = coefficient;
     }
 
-    public Cadre(String nom, String prenom, String matricule, LocalDate dateEmbauche, Double salaire, Double coefficient) {
+    public Cadre(String nom, String prenom, String matricule,
+                 LocalDate dateEmbauche, Double salaire, Double coefficient) {
         super(nom, prenom, matricule, dateEmbauche, salaire);
         this.coefficient = coefficient;
     }
 
-    public Cadre(String nom, String prenom, String matricule, LocalDate dateEmbauche, Double salaire, Boolean tempsPartiel, String sexe, Double coefficient) {
+    public Cadre(String nom, String prenom, String matricule,
+                 LocalDate dateEmbauche, Double salaire, Boolean tempsPartiel, String sexe, Double coefficient) {
         super(nom, prenom, matricule, dateEmbauche, salaire, tempsPartiel, sexe);
         this.coefficient = coefficient;
     }
