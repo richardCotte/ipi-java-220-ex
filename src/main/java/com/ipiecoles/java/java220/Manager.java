@@ -3,8 +3,10 @@ package com.ipiecoles.java.java220;
 import org.joda.time.LocalDate;
 
 import java.util.HashSet;
+import java.util.Objects;
 
 public class Manager extends Employe {
+
     private HashSet<Technicien> equipe = new HashSet<>();
 
     public void ajoutTechnicienEquipe(Technicien mbrEquipe){
@@ -33,6 +35,7 @@ public class Manager extends Employe {
     @Override
     public void augmenterSalaire(Double augPercent) throws Exception {
         augmenterSalaireEquipe(augPercent);
+        super.augmenterSalaire(augPercent);
     }
 
     @Override
@@ -45,4 +48,18 @@ public class Manager extends Employe {
     public Double getPrimeAnnuelle() {
         return Entreprise.primeAnnuelleBase() + Entreprise.PRIME_MANAGER_PAR_TECHNICIEN * equipe.size();
     }
+
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//        if (!super.equals(o)) return false;
+//        Manager manager = (Manager) o;
+//        return Objects.equals(equipe, manager.equipe);
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(super.hashCode(), equipe);
+//    }
 }

@@ -38,20 +38,6 @@ public class Commercial extends Employe {
         return Math.ceil(caAnnuel * 0.05) ;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-        Commercial that = (Commercial) o;
-        return Objects.equals(caAnnuel, that.caAnnuel) && Objects.equals(performance, that.performance);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(super.hashCode(), caAnnuel, performance);
-    }
-
     public Double getCaAnnuel() {
         return caAnnuel;
     }
@@ -66,5 +52,19 @@ public class Commercial extends Employe {
 
     public void setPerformance(Integer performance) {
         this.performance = performance;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Commercial that = (Commercial) o;
+        return Objects.equals(caAnnuel, that.caAnnuel) && Objects.equals(performance, that.performance);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), caAnnuel, performance);
     }
 }
