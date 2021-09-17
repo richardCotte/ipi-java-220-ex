@@ -14,8 +14,7 @@ public class Manager extends Employe {
     }
 
     public void ajoutTechnicienEquipe(String nom, String prenom, String matricule, LocalDate date, Double salaire, Integer grade) {
-        Technicien mbrEquipe = new Technicien(nom, prenom, matricule, date, salaire, grade);
-        equipe.add(mbrEquipe);
+        this.ajoutTechnicienEquipe(new Technicien(nom, prenom, matricule, date, salaire, grade));
     }
 
     private void augmenterSalaireEquipe(Double augPercent) throws Exception {
